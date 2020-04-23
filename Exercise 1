@@ -1,0 +1,83 @@
+Question 1: 1.	Print “Hello World!”
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!"); //This print Hello World in console
+  }
+}
+
+Question 2: Prompts user for height and weight, calculate and print out the height and weight of the user.
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter your Height: "); //This prompts for user Height
+    float height = input.nextFloat();
+    System.out.println("Enter your Weight: "); //This prompts for user Weight
+    float weight = input.nextFloat();
+
+    System.out.println("height:" + height + "cm\n" + "weight: "+ weight+"kg");//prints height and weight
+  }
+}
+
+Question 3:Reads integer entered by the user, multiplies the integer by itself and print out the result.
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter a number: "); //This prompts for number
+    int number = input.nextInt();//stores number value
+    int result = number * number;//Multiplies the number by itself
+
+    System.out.println("Result:" + result);//prints results
+  }
+}
+
+Question 4:Prints a right angle triangle with “*”. The base of the triangle depends on the integer given.
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter a number: "); //This prompts for number
+    int number = input.nextInt();//stores number value
+    for (int y = number; y > 0;y--){//this determines the height of the triangle
+      for (int x=0; x < y;x++){//this determines the number of stars horizontally
+        System.out.print("*");
+      }
+      System.out.println();//This starts on next line for the next row
+    }
+  }
+}
+
+Question 5:Prompt the user for number. This input indicates the number of integers the user will be entering next. 
+Print out the mode (highest occurrence) from the set of integers. 
+
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Enter a number: "); //This prompts for number
+    int number = input.nextInt();//indicates the number of inputs next
+    int result = 0;
+    for (int x = 0; x < number;x++){
+      System.out.println("Enter any number: ");//user inputs the numbers
+      int newNumber = input.nextInt();
+      if (result<newNumber){//immediately compares the previous number with the new one
+        result = newNumber;
+      }
+    }
+
+    System.out.println("result:" +result);//print the largest number
+  }
+}
